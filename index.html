@@ -30,12 +30,13 @@
 <body>
     <div id="root" class="bg-secondary-subtle vh-100 py-4">
         <main class="h-100 w-75 mx-auto d-flex">
-            <div class="contacts-side h-100 col-4 bg-primary d-flex flex-column">
+            <div class="contacts-side h-100 col-4 bg-white d-flex flex-column">
                 <header>
                     <div class="user min-h-100 p-3 d-flex justify-content-between">
                         <div class="user-image-name d-flex align-items-center gap-2">
-                            <img class="rounded-circle w-h-50" src="img/avatar_io.jpg" alt="user-avatar">
-                            <p class="mb-0">Alessia Osman</p>
+                            <img class="rounded-circle w-h-50" :src="`img/avatar${data.user.avatar}.jpg`"
+                                :alt="data.user.name">
+                            <p class="mb-0">{{data.user.name}}</p>
                         </div>
                         <div class="navbar d-flex align-items-center gap-3">
                             <i class="fa-solid fa-message"></i>
@@ -61,7 +62,15 @@
                         </div>
                     </div>
                 </header>
+                <!--Contacts List-->
                 <main class="flex-grow-1">
+                    <div class="contact">
+                        <div v-for="contact in data.contacts" :key="contact.id" class="contact-image-name d-flex gap-2 p-3">
+                            <img class="rounded-circle w-h-50" :src="`img/avatar${contact.avatar}.jpg`"
+                                :alt="contact.name">
+                            <p class="mb-0">{{contact.name}}</p>
+                        </div>
+                    </div>
 
                 </main>
             </div>
