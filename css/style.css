@@ -9,6 +9,8 @@
     --custom-bg-light-grey: #EAEAEA;
     --custom-bg-color-light-blue: #8EDAFC;
     --custom-color-grey: #B1B1B1;
+    --custom-color-dark-grey: #6B7376;
+    --custom-color-green: #D5F9BA;
 }
 
 /*Utilities*/
@@ -20,6 +22,9 @@
     width: 60px;
     height: 60px;
 }
+
+
+
 
 /*Generics*/
 header {
@@ -34,6 +39,15 @@ main {
     overflow: auto;
 }
 
+footer{
+    background-color: var(--custom-bg-light-grey);
+}
+
+footer i{
+    color: var(--custom-color-dark-grey);
+    font-size: 24px;
+}
+
 
 /*Contact header*/
 
@@ -41,8 +55,9 @@ main {
     border-right: 1px solid var(--custom-color-grey);
 }
 
-.contacts-side .navbar i{
+.navbar i{
     color: var(--custom-color-grey);
+    font-size: 24px;
 }
 
 .contacts-side .notifications{
@@ -73,4 +88,23 @@ main {
 
 .contact{
     border-bottom: 1px solid var(--custom-bg-light-grey);
+}
+
+/*Chat side*/
+
+.chat-container{
+    background-image: url('../img/mine.jpg');
+}
+
+.sent{
+    background-color: var(--custom-color-green);
+    align-self: flex-end;
+}
+
+.received{
+    background-color: white;
+}
+
+.message{
+    max-width: 300px;
 }
