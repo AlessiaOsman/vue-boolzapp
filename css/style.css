@@ -1,0 +1,23 @@
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Generics*/
+header {
+    min-height: 100px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+main {
+    overflow: auto;
+}
+
+footer {
+    min-height: 100px;
+}
