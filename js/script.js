@@ -7,7 +7,8 @@ const app = createApp({
     data(){
         return {
             ...data,
-            activeId: 2,
+            activeId: 1,
+            
         
         }
     },
