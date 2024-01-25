@@ -8,7 +8,8 @@ const app = createApp({
         return {
             ...data,
             activeId: 1,
-            
+            newMessageText: ''
+
         
         }
     },
@@ -19,6 +20,17 @@ const app = createApp({
 
         setActiveId(id){
             this.activeId = id
+        },
+
+        addMessage(){
+            const newMessage = {
+                id: new Date(),
+                date: false,
+                text: this.newMessageText,
+                status: 'sent'
+            }
+            this.currentContact.messages.push(newMessage)
+            this.newMessageText = ''
         }
     },
     computed: {
