@@ -31,6 +31,16 @@ const app = createApp({
             }
             this.currentContact.messages.push(newMessage)
             this.newMessageText = ''
+
+            setTimeout(()=>{
+                const newMessage = {
+                    id: new Date(),
+                    date: false,
+                    text: 'ok',
+                    status: 'received'
+                }
+                this.currentContact.messages.push(newMessage)
+            }, 1000)
         }
     },
     computed: {
