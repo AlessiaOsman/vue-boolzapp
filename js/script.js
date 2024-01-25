@@ -2,10 +2,16 @@ console.log('vue ok', Vue)
 
 const {createApp} = Vue
 
+
 const app = createApp({
     data(){
         return {
-            data
+            ...data
+        }
+    },
+    methods: {
+        getAvatarUrl({avatar}){
+            return `img/avatar${avatar}.jpg`
         }
     }
 })

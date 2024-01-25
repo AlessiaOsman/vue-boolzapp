@@ -90,6 +90,11 @@ footer i{
     border-bottom: 1px solid var(--custom-bg-light-grey);
 }
 
+.contact:hover{
+    cursor: pointer;
+    background-color: var(--custom-bg-light-grey);
+}
+
 /*Chat side*/
 
 .chat-container{
