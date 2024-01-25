@@ -66,7 +66,7 @@
                 <!--Contacts List-->
                 <main class="flex-grow-1">
                     <div class="contact-image-name">
-                        <div v-for="contact in contacts" :key="contact.id" class="contact d-flex gap-2 p-3">
+                        <div @click="setActiveId(contact.id)" v-for="contact in contacts" :key="contact.id" class="contact d-flex gap-2 p-3">
                             <img class="rounded-circle w-h-50" :src="getAvatarUrl(contact)"
                                 :alt="contact.name">
                             <p class="mb-0">{{contact.name}}</p>
@@ -80,9 +80,9 @@
                 <!--Chat Header-->
                 <header class="min-h-100 d-flex justify-content-between align-items-center">
                     <div class="contact-image-name d-flex gap-2 p-3">
-                        <img class="rounded-circle w-h-50" :src="`img/avatar${contacts[0].avatar}.jpg`"
-                            :alt="contacts[0].name">
-                        <p class="mb-0">{{contacts[0].name}}</p>
+                        <img class="rounded-circle w-h-50" :src="`img/avatar${currentContact.avatar}.jpg`"
+                            :alt="currentContact.name">
+                        <p class="mb-0">{{currentContact.name}}</p>
                     </div>
                     <div class="navbar d-flex align-items-center gap-3 pe-3">
                         <i class="fa-solid fa-magnifying-glass"></i>
