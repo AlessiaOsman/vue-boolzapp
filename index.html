@@ -66,7 +66,7 @@
                 <!--Contacts List-->
                 <main class="flex-grow-1">
                     <div class="contact-image-name">
-                        <div @click="setActiveId(contact.id)" v-for="contact in contacts" :key="contact.id"
+                        <div @click="setActiveId(contact.id)" v-for="contact in filteredContacts" :key="contact.id"
                             class="contact d-flex gap-2 p-3">
                             <img class="rounded-circle w-h-50" :src="getAvatarUrl(contact)" :alt="contact.name">
                             <p class="mb-0">{{contact.name}}</p>

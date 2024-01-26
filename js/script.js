@@ -10,6 +10,7 @@ const app = createApp({
             activeId: 1,
             newMessageText: '',
             searchContact: '',
+            
     }
     },
     methods: {
@@ -20,6 +21,8 @@ const app = createApp({
         setActiveId(id){
             this.activeId = id
         },
+
+        /** Creo l'oggetto del nuovo messaggio da inviare */
 
         addMessage(text, status){
             
@@ -42,25 +45,30 @@ const app = createApp({
             }, 1000)
         },
 
-        filteredContacts (){
-            const searchContactName = this.searchContact.toLowerCase
-            const filteredArray = this.contacts.filter((contact)=> contact.name.includes(searchContactName))
-
-            return filteredArray
-        }
+        
     },
     computed: {
+        /** Tengo monitorato il current contact */
         currentContact(){
             return this.contacts.find((contact)=> contact.id === this.activeId)
         },
-
+        /** Tengo monitorata la chat */
         currentChat(){
             return this.currentContact.messages;
+        },
+
+        filteredContacts (){
+            const searchContactName = this.searchContact.toLowerCase()
+            console.log(this.contacts)
+            return this.contacts.filter( contact => contact.name.toLowerCase().includes(searchContactName))
+
         }
 
         
     }
 })
+
+
 
 app.mount('#root')
 
