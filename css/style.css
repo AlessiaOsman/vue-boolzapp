@@ -113,3 +113,8 @@ footer i{
 .message{
     max-width: 300px;
 }
+
+.message-info{
+    font-size: 12px;
+    color: var(--custom-color-grey);
+}
